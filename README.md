@@ -21,3 +21,5 @@ Then Access Application use the following URL:
 To create a new Vehicle: 
 
 http://localhost:9000
+
+I have defined some test data in Vehicle.scala file. Please use that data to test this application.
