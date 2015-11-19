@@ -1,0 +1,18 @@
+@(vehicles: List[Vehicle])
+
+@main("DVLA") {
+    <h1>DVLA Vehicle Search Results</h1>
+    <div>
+	<table border="1">
+		@if(vehicles.isEmpty) {
+                <tr><td>Vehicle details not found!</td> </tr>
+		} else {
+			@vehicles.map { vehicle =>
+				<tr> <td>Vehicle ID:</td><td> @vehicle.id</td></tr>
+				<tr> <td>Vehicle Registration Number: </td><td>@vehicle.vehicleRegNum</td></tr>
+				<tr> <td>Vehicle Make:</td><td> @vehicle.vehicleMake</td></tr>
+			}
+		}
+    </table>
+    </div>
+}

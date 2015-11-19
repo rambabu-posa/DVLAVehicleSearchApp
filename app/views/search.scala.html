@@ -1,0 +1,16 @@
+@(title:String)
+
+@main("DVLA") {
+	<link rel="stylesheet" href="@routes.Assets.at("styles/vehicle.css")">
+    <h1>Details of the vehicle being checked</h1>
+	<p>To make an enquiry enter the vehicle registration number (number plate) and the vehicle make.</p>
+    <div>
+        <form action="@routes.DVLAController.getVehicle()" method="get">
+			<label for="female">Registration number</label><br/><br/>
+            <input type="text" name="vehicleRegNum" placeholder="Enter Registration Number" required class="input-large"/><br/><br/>
+			<label for="female">Vehicle make</label><br/><br/>
+            <input type="text" name="vehicleMake" placeholder="Enter Vehicle Make" required class="input-large"/><br/><br/>
+            <input type="submit" value="Search" class="input-button"/>
+        </form>
+    </div>
+}

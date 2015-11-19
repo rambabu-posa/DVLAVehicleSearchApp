@@ -1,0 +1,14 @@
+@(title: String)(content: play.twirl.api.Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+		<link rel="stylesheet" href="@routes.Assets.at("styles/vehicle.css")">
+    </head>
+    <body>
+    @content
+    </body>
+</html>
+
